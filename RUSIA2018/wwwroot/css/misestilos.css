@@ -1,0 +1,222 @@
+.portada {
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100%;
+    height: 299px;
+    background: url(../images/portada1.jpg);
+    background-size: 100% 100%;
+    margin-top: -30px;
+}
+
+body {
+    background: url(../images/arena.jpg);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+.table {
+    background-color: #2870b0;
+    color: white;
+}
+
+.e1 {
+    background-color: rgb(254, 28, 48);
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #222222;
+    color: white;
+    text-align: center;
+}
+
+.fifa {
+    width: 41px;
+    height: 41px;
+    background-image: url(../images/fifa.png);
+    background-size: 100% 100%;
+    margin-left: 200px;
+    margin-top: -38px;
+}
+
+.table-hover:hover {
+    color: black;
+}
+
+.col-md-7 h3 {
+    color: white;
+    letter-spacing: 4px;
+    background-color: rgba(34, 34, 34, 0.71);
+}
+
+.logo {
+    width: 121px;
+    height: 43px;
+    background-image: url(../images/logo.png);
+    background-size: 101% 130%;
+    background-position: 180px;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+.video {
+    position: fixed;
+    top: 333px;
+    margin-top: 12px;
+    background-color: rgba(19, 19, 19, 0.91);
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+    .video h3 {
+        color: orangered;
+    }
+
+.titulohoy {
+    color: white;
+    letter-spacing: 4px;
+    background-color: rgba(34, 34, 34, 0.71);
+}
+
+.formulario {
+    border-radius: 16px;
+    width: 100%;
+    height: 395px;
+    background-color: rgba(34, 34, 34, 0.8);
+}
+
+    .formulario form {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 67px;
+        color: white;
+    }
+
+.titregistro {
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-shadow: -2px 2px 7px black;
+}
+
+.pelota {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background: url(../images/1.jpg);
+    background-size: 300% 300%;
+    border-radius: 50%;
+    top: -14px;
+    left: 0;
+    transform: translate(-50%,-50%);
+    animation: pelota 9s linear infinite;
+    box-shadow: inset 3px 1px 4px 1px rgba(20, 20, 20, 0.7);
+    transform: rotate(45deg);
+}
+
+@keyframes pelota {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 700px 0;
+    }
+}
+
+.resultadocolor {
+    /*text-align:center;
+ background-color:red;
+ color:white;
+ text-transform:uppercase;*/
+    text-align: center;
+    background-color: #cd484a;
+    color: white;
+    text-transform: uppercase;
+    box-shadow: 2px 1px 12px 3px black;
+    letter-spacing: 5px;
+}
+
+.text-footer {
+    letter-spacing: 10px;
+}
+
+.mensaje {
+    width: 100%;
+    height: 250px;
+    background-color: white;
+}
+
+.titulo {
+    text-align: center;
+    background-color: rgba(255, 0, 0, 0.86);
+    color: white;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+
+.responsive-video {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 60px;
+    overflow: hidden;
+}
+
+    .responsive-video iframe,
+    .responsive-video object,
+    .responsive-video embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+.grafico {
+    width: 50%;
+    height: 60px;
+    background-color: #2d4a7a;
+    text-align: center;
+    border-top-right-radius: 100%;
+    box-shadow: 4px 6px 9px 5px #222222;
+    border: 6px solid #2d4a7a;
+}
+  
+
+.Noticias {
+    background-color: white;
+
+}
+
+
+
+    .Noticias h2 {
+        line-height:60px;
+        color:white;
+        background-color: transparent;
+        text-shadow: 0px 2px 3px black;
+    }
+.linea {
+    background: rgba(34, 34, 34, 0.2);
+    border: 1.5px solid rgba(34, 34, 34, 0.64);
+}
+.publicidad 
+{
+    width:100%;
+    height:90px;
+  
+}
+.pub-num1 
+{
+    background:url(../images/fifa.png);
+    background-size:contain;
+    background-repeat:no-repeat;
+}

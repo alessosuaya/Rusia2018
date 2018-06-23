@@ -1,0 +1,84 @@
+﻿
+@{
+    ViewData["Title"] = "Rusia 2018 :";
+    Layout = "~/Views/Inicio/Principal.cshtml";
+}
+
+
+
+<div class="portada"></div>
+
+<div id="main" class="container-fluid">
+    <div class="row">
+        <div class="col-md-7">
+            <h3>@ViewData["Title"]</h3>
+            <div class="table-responsive">
+                <table class="table table-hover" border="1" v-for="item in lists">
+                    <thead>
+                        <tr>
+                            <th>GRUPO {{item.group.letter}}</th>
+                            <th>G</th>
+                            <th>P</th>
+                            <th>E</th>
+                            <th>PTS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="5" class="e1"></td>
+                        </tr>
+                        <tr align="">
+                            <td>{{item.group.teams[0].team.country}}</td>
+                            <td>{{item.group.teams[0].team.wins}}</td>
+                            <td>{{item.group.teams[0].team.losses}}</td>
+                            <td>{{item.group.teams[0].team.draws}}</td>
+                            <td>{{item.group.teams[0].team.points}}</td>
+                        </tr>
+                        <tr align="">
+                            <td>{{item.group.teams[1].team.country}}</td>
+                            <td>{{item.group.teams[1].team.wins}}</td>
+                            <td>{{item.group.teams[1].team.losses}}</td>
+                            <td>{{item.group.teams[1].team.draws}}</td>
+                            <td>{{item.group.teams[1].team.points}}</td>
+                        </tr>
+                        <tr align="">
+                            <td>{{item.group.teams[2].team.country}}</td>
+                            <td>{{item.group.teams[2].team.wins}}</td>
+                            <td>{{item.group.teams[2].team.losses}}</td>
+                            <td>{{item.group.teams[2].team.draws}}</td>
+                            <td>{{item.group.teams[2].team.points}}</td>
+                        </tr>
+                        <tr align="">
+                            <td>{{item.group.teams[3].team.country}}</td>
+                            <td>{{item.group.teams[3].team.wins}}</td>
+                            <td>{{item.group.teams[3].team.losses}}</td>
+                            <td>{{item.group.teams[3].team.draws}}</td>
+                            <td>{{item.group.teams[3].team.points}}</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+        <div class="hidden-xs hidden-sm col-md-4">
+            <div class="video">
+                <h3>Intro</h3>
+                <iframe width="250" height="200" src="https://videos-sport-es.akamaized.net/sport/mp4/3/8/1528037140483.mp4" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+            @*<div class="video">
+            <h3>En vivo</h3>
+            <iframe width="250" height="200" src="https://www.youtube.com/embed/mV8jp1N2fSw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+        </div>
+        <div class="video">
+            <h3>Intro</h3>
+            <iframe width="250" height="200" src="https://videos-sport-es.akamaized.net/sport/mp4/3/8/1528037140483.mp4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+        </div>*@
+
+        </div>
+    </div>
+</div>
+<br />
+<br />
+<br />

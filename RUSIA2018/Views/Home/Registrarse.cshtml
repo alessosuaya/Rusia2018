@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewData["Title"] = "Registrarse";
+    Layout = "~/Views/Inicio/Principal.cshtml";
+}
+@model RUSIA2018.Models.Registro
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="formulario">
+                <div class="pelota"></div>
+                <form action="" method="post">
+                    <h4 class="titregistro">@ViewData["title"]</h4>
+
+
+                    <div class="input-group input-group-lg">
+                        <span class="input-group-addon" id="icono1"><span class="glyphicon glyphicon-user"></span></span>
+                        <input type="text" class="form-control" placeholder="Nick" aria-describedby="icono1" name="nickname">
+                    </div>
+                    <br />
+                    <div class="input-group input-group-lg">
+
+                        <span class="input-group-addon" id="icono2"><span class="glyphicon glyphicon-envelope"></span></span>
+                        <input type="email" class="form-control" placeholder="Ingrese su Correo" aria-describedby="icono2" name="correo">
+                    </div>
+
+                    <br />
+                    <div class="input-group input-group-lg">
+
+                        <span class="input-group-addon" id="icono3"><span class="glyphicon glyphicon-asterisk"></span></span>
+                        <input type="password" class="form-control" placeholder="Contraseña" aria-describedby="icono3">
+                    </div>
+                    <br />
+                    <div class="checkbox">
+                        <label><input type="checkbox"> Recuerda me</label>
+                    </div>
+                    <button type="submit" class="btn btn-success">Registro</button>
+                </form>
+            </div>
+          
+        </div>
+    </div>
+
+    </div>

@@ -1,0 +1,128 @@
+﻿
+@{
+    Layout = null;
+    
+}
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@model RUSIA2018.Models.Registro
+<!DOCTYPE html>
+
+<html lang="es-ar">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Principal</title>
+    @*<link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css">*@
+    <link href="~/css/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/misestilos.css" asp-append-version="true" />
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="logo"><a asp-area="" asp-controller="Home" asp-action="index"></a></div>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a asp-area="" asp-controller="Home" asp-action="index">INICIO</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Resultados">HOY</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Vivo">EN VIVO</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">MÁS
+                        <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a asp-area="" asp-controller="Home" asp-action="Error">Octavos de final</a></li>
+                            <li><a asp-area="" asp-controller="Home" asp-action="Error">404</a></li>
+                            <li><a asp-area="" asp-controller="Home" asp-action="Error">404</a></li>
+                            
+                        </ul>
+                    </li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Noticias">NOTICIAS</a></li>
+
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+
+                    <li><a asp-area="" asp-controller="Home" asp-action="Registrarse"><span class="glyphicon glyphicon-user"></span> Registrarse</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Ingresá</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    @RenderBody();
+
+    <footer class="footer">
+        <marquee>
+            <ul style="list-style:none">
+                <li><h4 class="text-footer">RUSIA-2018</h4></li>
+                <li><div class="fifa"></div></li>
+            </ul>
+        </marquee>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.5.1/vue-resource.min.js"></script>
+    <script type="text/javascript">
+
+        var varUrlUsers = 'http://worldcup.sfg.io/teams/group_results';
+new Vue({
+            el: '#main',
+created: function () {
+            this.getUsers();
+        },
+data: {
+            lists: ['teams']
+
+},
+methods: {
+            getUsers: function () {
+            this.$http.get(varUrlUsers).then(function (response) {
+                this.lists = response.data;
+
+            })
+        }
+        }
+    });
+    </script>
+    <script type="text/javascript">
+
+
+
+
+                        //var ruta2 = 'http://worldcup.sfg.io/matches';
+                        // var ruta2 = 'http://worldcup.sfg.io/matches/current';
+                        var ruta2 = 'http://worldcup.sfg.io/matches/today';
+            new Vue({
+                    el: '#resultados',
+                created: function () {
+                    this.obtener();
+                },
+                data: {
+                    eventos: []
+
+        },
+                methods: {
+                   
+                    obtener: function () {
+                    this.$http.get(ruta2).then(function (response) {
+                        this.eventos = response.data;
+                        
+                    })
+                }
+                }
+            });
+
+    </script>
+    @*<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>*@
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/bootstrap.js"></script>
+    </body>
+</html>

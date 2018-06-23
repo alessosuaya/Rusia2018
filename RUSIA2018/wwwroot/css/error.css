@@ -1,0 +1,67 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    background-color: rgba(51, 122, 183, 0.85);
+}
+.pelota {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background: url(../images/1.jpg);
+    background-size: 300% 300%;
+    border-radius:50%;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,50%);
+    animation: pelota 9s linear infinite;
+    box-shadow: inset 3px 1px 4px 1px rgba(20, 20, 20, 0.7);
+    
+}
+
+@keyframes pelota {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 700px 0;
+    }
+}
+.span1, .span2 {
+    font-size: 7em;
+    margin-top: -61px;
+    text-shadow: 5px 2px 9px #ff0000;
+}
+.span1 {
+    position: absolute;
+    top: 3%;
+    left: 45%;
+    transform: translate(-150%,50%);
+    color:white;
+}
+.span2 {
+    position: absolute;
+    top: 3%;
+    right: 45%;
+    transform: translate(150%,50%);
+    color:white;
+}
+
+
+.span1, .pelota, .span2 
+{
+    display:inline-block;
+}
+.mnserror {
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    height: 300px;
+    background-color: white;
+   
+}
+.carita 
+{
+    font-size:6em;
+    margin-left:10px;
+}

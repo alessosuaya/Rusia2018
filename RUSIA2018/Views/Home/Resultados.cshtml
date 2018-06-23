@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewData["Title"] = "Resultados";
+    Layout = "~/Views/Inicio/Principal.cshtml";
+}
+<div class="container" id="resultados">
+    <div class="row" v-for="item in eventos">
+
+        <div class="col-md-6">
+            <h4 class="text-center titulohoy">Evento de hoy</h4>
+            <ul class="list-group">
+                <li class="list-group-item"> CIUDAD - {{item.venue}}     ESTADIO - {{item.location}} </li>
+
+                <li class="list-group-item resultadocolor">
+
+                    {{item.home_team.country}}  ({{item.home_team.goals}}) - ({{item.away_team.goals}}) {{item.away_team.country}} <span v-if="item.status == 'completed'"> FINAL</span><span v-if="item.status == 'future'"> POR EMPEZAR</span> <span v-if ="item.status !='completed' && item.status != 'future'"> JUGANDO</span>
+
+
+                </li>
+
+
+            </ul>
+        </div>
+        <div class="col-md-6">
+           
+        </div>
+
+    </div>
+  
+</div>
+
+
+
+
+
+
