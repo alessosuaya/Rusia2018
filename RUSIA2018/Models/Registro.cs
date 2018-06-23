@@ -29,8 +29,8 @@ namespace RUSIA2018.Models
         {
             //Nick = "Bienvenido : " + v;
             //Mail = "Suscripción correcta! hemos enviado un correo electronico a :" + v2 +"  para mantenerte informado con los resultados del Mundial.. Ya puedes participar por la entrada a la final del mundial!!";
-            v=Nick;
-            v2=Correo;
+           Nick=v;
+           Correo=v2;
         }
     }
 }
